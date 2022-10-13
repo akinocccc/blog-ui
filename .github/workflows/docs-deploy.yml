@@ -22,7 +22,7 @@ jobs:
           cache: yarn
 
       - name: 安装依赖
-        run: cd docs && yarn --frozen-lockfile
+        run: yarn && cd docs && yarn --frozen-lockfile
 
       - name: 构建文档
         env:
