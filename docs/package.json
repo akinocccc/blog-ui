@@ -1,0 +1,19 @@
+{
+  "name": "docs",
+  "version": "0.0.1",
+  "description": "animaton-ui document",
+  "main": "index.js",
+  "repository": "https://github.com/vkm0303/animation-ui/docs",
+  "author": "akino",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:serve": "vitepress serve"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0",
+    "vitepress": "^1.0.0-alpha.19"
+  }
+}
