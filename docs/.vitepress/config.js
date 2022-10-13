@@ -3,6 +3,7 @@ module.exports = {
   description: "Make it interesting",
   lang: "zh-CN",
   cleanUrls: "without-subfolders",
+  base: "/animation-ui",
   themeConfig: {
     repo: "vkm0303/animation-ui",
     // repoLabel: "测试",
