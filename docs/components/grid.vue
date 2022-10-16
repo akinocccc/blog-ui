@@ -12,5 +12,6 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100px;
+  margin: 15px 0;
 }
 </style>
