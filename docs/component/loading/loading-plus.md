@@ -10,8 +10,8 @@ editLink: true
 
 <script setup lang="ts">
 import { reactive } from 'vue';
-import DisplayContainer from '../components/display-container.vue';
-import Loading from "../../packages/components/loading-plus/index.vue";
+import DisplayContainer from '../../components/display-container.vue';
+import LoadingPlus from "../../../packages/components/loading-plus/index.vue";
 const componentProps = reactive([
   {
     type: 'rotate-plane',
@@ -29,11 +29,13 @@ const componentProps = reactive([
     type: 'three-bounce',
   }, {
     type: 'chasing-dots',
+  }, {
+    type: 'bounce-ball',
   }
 ]);
 </script>
 
-<display-container :component="Loading" :componentProps="componentProps" />
+<display-container :component="LoadingPlus" :componentProps="componentProps" />
 
 ## circle
 

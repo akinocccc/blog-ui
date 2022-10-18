@@ -11,6 +11,7 @@ import PluseWave from "./src/pulse-wave.vue";
 import ChasingDots from "./src/chasing-dots.vue";
 import ThreeBounce from "./src/three-bounce.vue";
 import FoldingCube from "./src/folding-cube.vue";
+import BounceBall from "./src/bounce-ball.vue";
 import getCamelCase from "../../utils/getCamelCase";
 const props = defineProps({
   componentProps: Object,
@@ -24,6 +25,7 @@ const components: any = {
   ChasingDots,
   ThreeBounce,
   FoldingCube,
+  BounceBall,
 };
 const type = getCamelCase(props?.componentProps?.type);
 </script>

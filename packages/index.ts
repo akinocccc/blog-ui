@@ -1,4 +1,4 @@
-import NormalLoading from "./components/loading";
+import NormalLoading from "./components/loading/index.vue";
 
 export default {
   NormalLoading,

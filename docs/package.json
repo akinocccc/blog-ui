@@ -12,8 +12,12 @@
     "docs:build": "vitepress build",
     "docs:serve": "vitepress serve"
   },
+  "dependencies": {
+    "vue": "^3.2.38"
+  },
   "devDependencies": {
     "sass": "^1.55.0",
-    "vitepress": "^1.0.0-alpha.19"
+    "vitepress": "^1.0.0-alpha.19",
+    "vite": "^3.0.9"
   }
 }

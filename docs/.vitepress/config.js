@@ -3,7 +3,8 @@ module.exports = {
   description: "Make it interesting",
   lang: "zh-CN",
   cleanUrls: "without-subfolders",
-  base: "/animation-ui",
+  // base: "/animation-ui",
+  // base: "/",
   themeConfig: {
     repo: "vkm0303/animation-ui",
     // repoLabel: "测试",
@@ -33,12 +34,12 @@ function nav() {
   return [
     {
       text: "Guide",
-      link: "/guide/",
-      activeMatch: "/guide/introduction",
+      link: "/guide/introduction",
+      activeMatch: "/guide/",
     },
     {
       text: "Components",
-      link: "/component/loading",
+      link: "/component//loading/loading",
       activeMatch: "/component/",
     },
   ];
@@ -51,11 +52,16 @@ function sidebarGuide() {
 function sidebarComponent() {
   return [
     {
-      text: "loading",
+      text: "Loading",
       items: [
-        { text: "loading", link: "/component/loading" },
-        { text: "loading plus", link: "/component/loading-plus" },
+        { text: "loading", link: "/component/loading/loading" },
+        { text: "loading plus", link: "/component/loading/loading-plus" },
       ],
+    },
+    {
+      text: "Text",
+      // link: "/component/text/text",
+      items: [],
     },
   ];
 }
