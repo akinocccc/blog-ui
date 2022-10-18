@@ -20,7 +20,7 @@ module.exports = {
     nav: nav(),
     sidebar: {
       "/guide/": sidebarGuide(),
-      "/component/": sidebarComponent(),
+      "/examples/": sidebarComponent(),
     },
     socialLinks: [
       { icon: "github", link: "https://github.com/vkm0303/animation-ui" },
@@ -41,8 +41,8 @@ function nav() {
     },
     {
       text: "Components",
-      link: "/component//loading/loading",
-      activeMatch: "/component/",
+      link: "/examples/loading/loading",
+      activeMatch: "/examples/",
     },
   ];
 }
@@ -56,19 +56,17 @@ function sidebarComponent() {
     {
       text: "Loading",
       items: [
-        { text: "loading", link: "/component/loading/loading" },
-        { text: "loading plus", link: "/component/loading/loading-plus" },
+        { text: "loading", link: "/examples/loading/loading" },
+        { text: "loading plus", link: "/examples/loading/loading-plus" },
       ],
     },
     {
       text: "Text",
-      // link: "/component/text/text",
-      items: [{ text: "Text", link: "/component/text/text" }],
+      items: [{ text: "Text", link: "/examples/text/text" }],
     },
     {
       text: "Orthers",
-      // link: "/component/text/text",
-      items: [{ text: "celebrate", link: "/component/other/celebrate" }],
+      items: [{ text: "celebrate", link: "/examples/other/celebrate" }],
     },
   ];
 }

@@ -5,7 +5,7 @@
         <component :is="component" :componentProps="item"></component>
       </template>
       <template v-slot:name>
-        <span>{{ item.type }}</span>
+        <span style="margin-top: 5px">{{ item.type }}</span>
       </template>
     </grid>
   </div>
@@ -29,6 +29,6 @@ console.log(props.component, props.componentProps);
   grid-template-columns: repeat(auto-fill, 150px);
   gap: 10px;
   justify-content: space-around;
-  margin: 50px 0;
+  // margin: 50px 0;
 }
 </style>
