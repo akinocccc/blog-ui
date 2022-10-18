@@ -1,10 +1,12 @@
+const { argv } = process;
+const env = argv[argv.length - 1];
+
 module.exports = {
   title: "Animation UI",
   description: "Make it interesting",
   lang: "zh-CN",
   cleanUrls: "without-subfolders",
-  // base: "/animation-ui",
-  // base: "/",
+  base: env === "dev" ? "/" : "/animation-ui",
   themeConfig: {
     repo: "vkm0303/animation-ui",
     // repoLabel: "测试",
@@ -61,7 +63,12 @@ function sidebarComponent() {
     {
       text: "Text",
       // link: "/component/text/text",
-      items: [],
+      items: [{ text: "Text", link: "/component/text/text" }],
+    },
+    {
+      text: "Orthers",
+      // link: "/component/text/text",
+      items: [{ text: "celebrate", link: "/component/other/celebrate" }],
     },
   ];
 }
