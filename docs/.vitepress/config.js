@@ -1,10 +1,12 @@
+const { argv } = process;
+const env = argv[argv.length - 1];
+
 module.exports = {
   title: "Animation UI",
   description: "Make it interesting",
   lang: "zh-CN",
   cleanUrls: "without-subfolders",
-  // base: "/animation-ui",
-  // base: "/",
+  base: env === "dev" ? "/" : "/animation-ui",
   themeConfig: {
     repo: "vkm0303/animation-ui",
     // repoLabel: "测试",
@@ -18,7 +20,7 @@ module.exports = {
     nav: nav(),
     sidebar: {
       "/guide/": sidebarGuide(),
-      "/component/": sidebarComponent(),
+      "/examples/": sidebarComponent(),
     },
     socialLinks: [
       { icon: "github", link: "https://github.com/vkm0303/animation-ui" },
@@ -39,8 +41,8 @@ function nav() {
     },
     {
       text: "Components",
-      link: "/component//loading/loading",
-      activeMatch: "/component/",
+      link: "/examples/loading/loading",
+      activeMatch: "/examples/",
     },
   ];
 }
@@ -54,14 +56,17 @@ function sidebarComponent() {
     {
       text: "Loading",
       items: [
-        { text: "loading", link: "/component/loading/loading" },
-        { text: "loading plus", link: "/component/loading/loading-plus" },
+        { text: "loading", link: "/examples/loading/loading" },
+        { text: "loading plus", link: "/examples/loading/loading-plus" },
       ],
     },
     {
       text: "Text",
-      // link: "/component/text/text",
-      items: [],
+      items: [{ text: "Text", link: "/examples/text/text" }],
+    },
+    {
+      text: "Orthers",
+      items: [{ text: "celebrate", link: "/examples/other/celebrate" }],
     },
   ];
 }

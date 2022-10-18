@@ -16,10 +16,10 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .folding-cube {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   transform: rotateZ(45deg);
   .cube {
     position: relative;

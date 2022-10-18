@@ -15,8 +15,10 @@ import Loading from "../../../packages/components/loading/index.vue";
 const componentProps = reactive([
   {
     type: 'circle',
+    show: true,
   }, {
     type: 'incomplete-circle',
+    show: true,
   }
 ]);
 </script>

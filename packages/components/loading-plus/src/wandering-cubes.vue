@@ -20,7 +20,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .wandering-cubes {
   position: relative;
   width: 50px;

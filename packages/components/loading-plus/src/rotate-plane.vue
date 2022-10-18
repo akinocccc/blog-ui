@@ -11,7 +11,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .rotate-plane {
   width: 50px;
   height: 50px;

@@ -1,15 +1,15 @@
 <template>
   <component
-    :is="Loading"
+    :is="Text"
     :type="props?.componentProps?.type"
+    :text="props?.componentProps?.text"
     :class="props?.componentProps?.class"
     :style="props?.componentProps?.style"
-    v-show="props?.componentProps?.show"
   />
 </template>
 
 <script setup lang="ts">
-import Loading from "./src/loading.vue";
+import Text from "./src/text.vue";
 const props = defineProps({
   componentProps: Object,
 });

@@ -28,11 +28,12 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .bounce-ball {
   position: relative;
   width: 90px;
-  height: 100px;
+  min-height: 50px;
+  height: 100%;
   .bounce-ball-child {
     position: absolute;
     left: 0;
@@ -43,27 +44,27 @@ const props = defineProps({
     animation: kf-bounce-ball 2s linear infinite;
     @keyframes kf-bounce-ball {
       0% {
-        bottom: 30px;
+        bottom: 22px;
         left: 0;
       }
       20% {
-        bottom: 43px;
+        bottom: 36px;
         left: 15px;
       }
       40% {
-        bottom: 30px;
+        bottom: 22px;
         left: 30px;
       }
       60% {
-        bottom: 43px;
+        bottom: 36px;
         left: 45px;
       }
       80% {
-        bottom: 30px;
+        bottom: 22px;
         left: 60px;
       }
       100% {
-        bottom: 43px;
+        bottom: 36px;
         left: 75px;
         opacity: 0;
       }
