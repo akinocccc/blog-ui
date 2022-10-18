@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@animation-ui/docs",
   "version": "0.0.1",
   "description": "animaton-ui document",
   "main": "index.js",
