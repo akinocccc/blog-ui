@@ -1,5 +1,5 @@
 <template>
-  <component :is="components[type]" />
+  <component :is="components[type]" v-show="props?.componentProps?.show" />
 </template>
 
 <script setup lang="ts">

@@ -24,7 +24,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .chasing-dots {
   width: 50px;
   height: 50px;

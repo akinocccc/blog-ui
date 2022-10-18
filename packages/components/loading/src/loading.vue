@@ -1,11 +1,9 @@
 <template>
   <div class="loading-wrapper">
     <div
-      :class="['loading', props.type]"
-      :style="`border-color: ${props.color}`"
-    >
-      <div class="mask"></div>
-    </div>
+      :class="['loading', props.type, props.class]"
+      :style="`border-color: ${props.color}; ${props.style}`"
+    ></div>
   </div>
 </template>
 
@@ -19,11 +17,22 @@ const props = defineProps({
     type: String,
     default: "#1d77ff",
   },
+  style: {
+    type: String,
+    default: "",
+  },
+  class: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   .loading {
@@ -35,20 +44,14 @@ const props = defineProps({
   }
   .circle {
     border-right-color: transparent !important;
-    animation: kf-loading-rotate 1s linear infinite;
+    animation: kf-loading-rotate 0.8s linear infinite;
   }
   .incomplete-circle {
     border-left-color: transparent !important;
     border-right-color: transparent !important;
-    animation: kf-loading-rotate 1s linear infinite;
+    animation: kf-loading-rotate 0.8s linear infinite;
   }
   @keyframes kf-loading-rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
     100% {
       transform: rotate(360deg);
     }

@@ -24,7 +24,7 @@ const props = defineProps({
 const colors = ref(getLightColor(props.color, 0.3));
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .double-bounce {
   position: relative;
   width: 50px;
