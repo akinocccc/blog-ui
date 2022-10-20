@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-wrapper">
+  <div class="loading-wrapper" v-show="props?.show">
     <div
       :class="['loading', props.type, props.class]"
       :style="`border-color: ${props.color}; ${props.style}`"
@@ -16,6 +16,10 @@ const props = defineProps({
   color: {
     type: String,
     default: "#1d77ff",
+  },
+  show: {
+    type: Boolean,
+    default: false,
   },
   style: {
     type: String,

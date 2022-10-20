@@ -1,0 +1,5 @@
+{
+  "name": "@animation-ui/core",
+  "description": "core",
+  "main": "index.ts"
+}

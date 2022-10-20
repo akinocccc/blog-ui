@@ -1,16 +1,30 @@
-import { fileURLToPath, URL } from "node:url";
-
+import { resolve } from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
-import VueSetupExtend from "vite-plugin-vue-setup-extend";
+import dts from "vite-plugin-dts";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx(), VueSetupExtend()],
+  build: {
+    lib: {
+      entry: resolve(__dirname, "./packages/index.ts"),
+      name: "Bundle",
+      fileName: "bundle",
+    },
+    rollupOptions: {
+      external: ["vue"],
+      output: {
+        globals: {
+          vue: "Vue",
+        },
+      },
+    },
+  },
+  plugins: [vue(), dts({ include: "./packages" })],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./packages", import.meta.url)),
+      "@": resolve(__dirname, "./packages"),
+      "@components": resolve(__dirname, "./packages/components"),
+      "@utils": resolve(__dirname, "./packages/utils"),
     },
   },
 });

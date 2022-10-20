@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import getLightColor from "../../../utils/getLightColor";
+import getLightColor from "@utils/getLightColor";
 
 const props = defineProps({
   color: {

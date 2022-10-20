@@ -8,16 +8,18 @@ editLink: true
 
 ## Display
 
+<docs-display :component="Text" :componentProps="componentProps" />
+
 <script setup lang="ts">
-import { reactive } from 'vue';
-import DisplayContainer from '../../components/display-container.vue';
-import Text from "../../../packages/components/text/index.vue";
-const componentProps = reactive([
+import DocsDisplay from '../../components/docs-display/index.tsx';
+import { Text } from "../../../dist/bundle.mjs";
+const componentProps = [
   {
     type: 'shadow-bounce',
     text: 'I am bounce text.',
   }
-]);
+];
 </script>
-
-<display-container :component="Text" :componentProps="componentProps" />
+<style>
+@import '../../../dist/style.css'
+</style>
