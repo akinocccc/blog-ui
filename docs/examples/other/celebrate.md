@@ -12,9 +12,8 @@ editLink: true
 
 <script setup lang="ts">
 import { reactive } from 'vue';
-import DisplayContainer from '../../components/display-container.vue';
 import Celebrate from "../../../packages/components/other/celebrate.vue";
-import { Loading } from "../../../dist/bundle.js";
+import { Loading } from "../../../dist/bundle.mjs";
 
 const componentProps = reactive([
   {

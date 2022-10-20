@@ -12,7 +12,7 @@ editLink: true
 
 <script setup lang="ts">
 import DocsDisplay from '../../components/docs-display/index.tsx';
-import { Loading } from "../../../dist/bundle.js";
+import { Loading } from "../../../dist/bundle.mjs";
 const componentProps = [
   {
     type: 'circle',
