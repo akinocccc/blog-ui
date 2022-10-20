@@ -8,11 +8,12 @@ editLink: true
 
 ## Display
 
+<docs-display :component="Loading" :componentProps="componentProps" />
+
 <script setup lang="ts">
-import { reactive } from 'vue';
-import DisplayContainer from '../../components/display-container.vue';
-import Loading from "../../../packages/components/loading/index.vue";
-const componentProps = reactive([
+import DocsDisplay from '../../components/docs-display/index.tsx';
+import { Loading } from "../../../dist/bundle.js";
+const componentProps = [
   {
     type: 'circle',
     show: true,
@@ -20,7 +21,9 @@ const componentProps = reactive([
     type: 'incomplete-circle',
     show: true,
   }
-]);
+];
 </script>
 
-<display-container :component="Loading" :componentProps="componentProps" />
+<style>
+@import '../../../dist/style.css'
+</style>

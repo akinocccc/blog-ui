@@ -8,11 +8,12 @@ editLink: true
 
 ## Display
 
+<docs-display :component="LoadingPlus" :componentProps="componentProps" />
+
 <script setup lang="ts">
-import { reactive } from 'vue';
-import DisplayContainer from '../../components/display-container.vue';
-import LoadingPlus from "../../../packages/components/loading-plus/index.vue";
-const componentProps = reactive([
+import DocsDisplay from '../../components/docs-display/index.tsx';
+import { LoadingPlus } from "../../../dist/bundle.js";
+const componentProps = [
   {
     type: 'rotate-plane',
     show: true,
@@ -41,10 +42,12 @@ const componentProps = reactive([
     type: 'bounce-ball',
     show: true,
   }
-]);
+];
 </script>
 
-<display-container :component="LoadingPlus" :componentProps="componentProps" />
+<style>
+@import '../../../dist/style.css'
+</style>
 
 ## circle
 
