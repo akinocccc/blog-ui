@@ -2,7 +2,6 @@
   "name": "animation-ui",
   "private": "true",
   "version": "0.0.1",
-  "type": "module",
   "main": "./dist/bundle.js",
   "module": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
