@@ -34,11 +34,11 @@ const render = (
   ctx.clearRect(0, 0, width, height);
   ctx.beginPath();
   rectArr.forEach((el) => {
-    // el.y = el.y > height ? -10 : el.y + el.step;
-    // ctx.rect(el.x, el.y, 2, 2);
-    // ctx.fillStyle = el.color;
-    // ctx.fill();
-    // ctx.closePath();
+    el.y = el.y > height ? -10 : el.y + el.step;
+    ctx.rect(el.x, el.y, 2, 2);
+    ctx.fillStyle = el.color;
+    ctx.fill();
+    ctx.closePath();
   });
   // ctx.rotate(360);
   // requestAnimationFrame(() => render(ctx, width, height, rectArr));

@@ -1,0 +1,28 @@
+<template>
+  <div class="play-container"><Loading show /></div>
+</template>
+
+<script setup lang="ts">
+// import the component which you want to preview.
+import { Loading } from "@animation-ui/core";
+</script>
+
+<style lang="scss">
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  #play {
+    height: 100%;
+    width: 100%;
+    .play-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+</style>

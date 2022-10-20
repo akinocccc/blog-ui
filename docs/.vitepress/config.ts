@@ -8,10 +8,12 @@ module.exports = {
   cleanUrls: "without-subfolders",
   base: env === "dev" ? "/" : "/animation-ui",
   themeConfig: {
+    siteTitle: "",
+    logo: "./logo.svg",
     repo: "vkm0303/animation-ui",
     // repoLabel: "测试",
     docsDir: "./",
-    // docsBranch: "master",
+    docsBranch: "master",
     editLink: {
       pattern: "https://github.com/vkm0303/animation-ui/docs/:path",
       text: "Edit this page on GitHub",
@@ -48,7 +50,17 @@ function nav() {
 }
 
 function sidebarGuide() {
-  return [];
+  return [
+    {
+      text: "Guide",
+      items: [
+        {
+          text: "What is Animation UI?",
+          link: "/guide/introduction",
+        },
+      ],
+    },
+  ];
 }
 
 function sidebarComponent() {
