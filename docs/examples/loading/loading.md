@@ -8,11 +8,11 @@ editLink: true
 
 ## Display
 
-<docs-display :component="Loading" :componentProps="componentProps" />
+<docs-display :component="AniLoading" :componentProps="componentProps" />
 
 <script setup lang="ts">
 import DocsDisplay from '../../components/docs-display/index.tsx';
-import { Loading } from "../../../dist/bundle.mjs";
+import { AniLoading } from "../../../dist";
 const componentProps = [
   {
     type: 'circle',

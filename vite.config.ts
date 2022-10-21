@@ -2,13 +2,14 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import vueSetupExtend from "vite-plugin-vue-setup-extend";
 
 export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "./packages/index.ts"),
       name: "Bundle",
-      fileName: "bundle",
+      fileName: "index",
     },
     rollupOptions: {
       external: ["vue"],
@@ -19,7 +20,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [vue(), dts({ include: "./packages" })],
+  plugins: [vue(), dts({ include: "./packages" }), vueSetupExtend()],
   resolve: {
     alias: {
       "@": resolve(__dirname, "./packages"),

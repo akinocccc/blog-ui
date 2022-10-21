@@ -1,20 +1,16 @@
 <template>
   <div class="text-wrapper">
-    <text :class="['text', props.type, props.class]" :style="props.style">{{
-      props.text
-    }}</text>
+    <text :class="['text', props.type, props.class]" :style="props.style"
+      ><slot></slot
+    ></text>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="AniText">
 const props = defineProps({
   type: {
     type: String,
     default: "shadow-bounce",
-  },
-  text: {
-    type: String,
-    default: "",
   },
   style: {
     type: String,

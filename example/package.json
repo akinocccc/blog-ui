@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@animation-ui/core": "workspace:*",
+    "@animation-ui/core": "workspace:^0.0.1",
     "vue": "^3.2.37"
   },
   "devDependencies": {

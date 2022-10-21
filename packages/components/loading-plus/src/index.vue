@@ -2,7 +2,7 @@
   <component :is="components[type]" v-show="props?.show" />
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="AniLoadingPlus">
 import RotatePlane from "@components/loading-plus/src/rotate-plane.vue";
 import DoubleBounce from "@components/loading-plus/src/double-bounce.vue";
 import Wave from "@components/loading-plus/src/wave.vue";
@@ -12,7 +12,7 @@ import ChasingDots from "@components/loading-plus/src/chasing-dots.vue";
 import ThreeBounce from "@components/loading-plus/src/three-bounce.vue";
 import FoldingCube from "@components/loading-plus/src/folding-cube.vue";
 import BounceBall from "@components/loading-plus/src/bounce-ball.vue";
-import getCamelCase from "@utils/getCamelCase";
+import getCamelCase from "@/utils/toCamelCase";
 
 const props = defineProps({
   type: { type: String, default: "rotate-plane" },
