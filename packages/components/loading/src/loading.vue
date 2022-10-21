@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="AniLoading">
 const props = defineProps({
   type: {
     type: String,

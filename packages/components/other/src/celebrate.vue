@@ -2,8 +2,9 @@
   <canvas class="canvas" ref="canvas" />
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="AniCelebrate">
 import { ref, onMounted } from "vue";
+
 const canvas = ref<HTMLCanvasElement | any>(null);
 
 onMounted(() => {

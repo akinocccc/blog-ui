@@ -77,7 +77,7 @@ function sidebarComponent() {
       items: [{ text: "Text", link: "/examples/text/text" }],
     },
     {
-      text: "Orthers",
+      text: "Other",
       items: [{ text: "celebrate", link: "/examples/other/celebrate" }],
     },
   ];

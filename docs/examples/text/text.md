@@ -8,15 +8,14 @@ editLink: true
 
 ## Display
 
-<docs-display :component="Text" :componentProps="componentProps" />
+<docs-display :component="AniText" :componentProps="componentProps">123</docs-display>
 
 <script setup lang="ts">
 import DocsDisplay from '../../components/docs-display/index.tsx';
-import { Text } from "../../../dist/bundle.mjs";
+import { AniText } from "../../../dist";
 const componentProps = [
   {
-    type: 'shadow-bounce',
-    text: 'I am bounce text.',
+    type: 'shadow-bounce'
   }
 ];
 </script>

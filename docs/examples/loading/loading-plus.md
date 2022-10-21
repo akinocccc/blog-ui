@@ -8,11 +8,11 @@ editLink: true
 
 ## Display
 
-<docs-display :component="LoadingPlus" :componentProps="componentProps" />
+<docs-display :component="AniLoadingPlus" :componentProps="componentProps" />
 
 <script setup lang="ts">
 import DocsDisplay from '../../components/docs-display/index.tsx';
-import { LoadingPlus } from "../../../dist/bundle.mjs";
+import { AniLoadingPlus } from "../../../dist";
 const componentProps = [
   {
     type: 'rotate-plane',

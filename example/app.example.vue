@@ -1,10 +1,11 @@
 <template>
-  <div class="play-container"><Loading show /></div>
+  <div class="play-container">
+    <ani-loading show /><ani-text>I am ani-loading</ani-text>
+  </div>
 </template>
 
 <script setup lang="ts">
-// import the component which you want to preview.
-import { Loading } from "@animation-ui/core";
+// code here
 </script>
 
 <style lang="scss">
