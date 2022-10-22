@@ -1,1 +1,0 @@
-import{a as c,h as n}from"../app.bca8d9eb.js";const d=a=>c("div",{class:"wrapper"},[a==null?void 0:a.componentProps.map(e=>c("div",{class:"grid"},[n(a==null?void 0:a.component,e),e.type]))]);export{d as D};
