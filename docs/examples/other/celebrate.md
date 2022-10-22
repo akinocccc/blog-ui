@@ -6,24 +6,21 @@ editLink: true
 
 # Celebrate
 
-<!-- <Celebrate :componentProps="componentProps" /> -->
-
-<display-container :component="AniLoading" :componentProps="componentProps" />
+<ani-celebrate/>
 
 <script setup lang="ts">
 import { reactive } from 'vue';
-import Celebrate from "../../../packages/components/other/celebrate.vue";
-import { AniLoading } from "../../../dist";
+import { AniCelebrate } from "../../../dist";
 
-const componentProps = reactive([
-  {
-    type: 'circle',
-    show: true,
-  }, {
-    type: 'incomplete-circle',
-    show: true,
-  }
-]);
+// const componentProps = reactive([
+//   {
+//     type: 'circle',
+//     show: true,
+//   }, {
+//     type: 'incomplete-circle',
+//     show: true,
+//   }
+// ]);
 </script>
 
 <style>
