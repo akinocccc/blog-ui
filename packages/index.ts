@@ -1,2 +1,5 @@
+import * as components from "./components";
+import { makeInstaller } from "./utils/install";
+
 export * from "./components";
-export * as default from "./components";
+export default makeInstaller(Object.values(components));

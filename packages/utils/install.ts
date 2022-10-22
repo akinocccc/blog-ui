@@ -1,4 +1,5 @@
-import type { AppContext, Plugin } from "vue";
+import type { AppContext } from "vue";
+import type { App, Plugin } from "@vue/runtime-core";
 
 export type SFCWithInstall<T> = T & Plugin;
 
@@ -24,13 +25,12 @@ export const withInstall = <T, E extends Record<string, any>>(
   return main as SFCWithInstall<T> & E;
 };
 
-// import type { App, Plugin } from '@vue/runtime-core'
+export const makeInstaller = (components: Plugin[] = []) => {
+  const install = (app: App) => {
+    components.forEach((c) => app.use(c));
+  };
 
-// export default function makeInstall(components: Plugin[] = []) {
-//   return function (app: App) {
-//     components.forEach((c) => app.use(c))
-//   }
-//   // return function install(app: App) {
-//   //   app.component("Loading", Loading);
-//   // }
-// }
+  return {
+    install,
+  };
+};
