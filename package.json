@@ -19,8 +19,8 @@
   "scripts": {
     "dev": "pnpm -C example dev",
     "build": "tsc && vite build",
-    "docs:dev": "pnpm run build && pnpm -C docs docs:dev",
-    "docs:build": "pnpm run build && pnpm -C docs docs:build",
+    "docs:dev": "pnpm -C docs docs:dev",
+    "docs:build": "pnpm -C docs docs:build",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "commit": "cz",
     "prepare": "husky install"
