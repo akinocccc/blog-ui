@@ -2,6 +2,7 @@
 export * from "./loading";
 export * from "./loading-plus";
 export * from "./text";
+export * from "./other";
 
 // export { Loading, LoadingPlus, Text };
 
