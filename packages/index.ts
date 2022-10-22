@@ -1,5 +1,5 @@
 import * as Components from "./components";
 import { makeInstaller } from "./utils/install";
 
-export const components = Components;
-export default makeInstaller(Object.values(components));
+export * from "./components";
+export default makeInstaller(Object.values(Components));
