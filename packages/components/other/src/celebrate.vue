@@ -1,19 +1,28 @@
 <template>
-  <div>
-    <canvas
-      id="canvas"
-      class="canvas"
-      ref="canvas"
-      :width="documentWidth"
-      :height="documentHeight"
-    />
-  </div>
+  <canvas
+    id="canvas"
+    class="canvas"
+    ref="canvas"
+    :width="documentWidth"
+    :height="documentHeight"
+    v-if="show"
+  />
 </template>
 
 <script setup lang="ts" name="AniCelebrate">
+import console from "console";
 import { ref, onMounted } from "vue";
 import Spirit from "./spirit";
 
+const props = defineProps({
+  show: {
+    type: Boolean,
+    require: true,
+    default: false,
+  },
+});
+
+let show = ref<boolean>(props.show);
 const documentWidth = ref<number>(0);
 const documentHeight = ref<number>(0);
 const canvas = ref<HTMLCanvasElement | any>(null);
@@ -59,6 +68,7 @@ function getWindowRect() {
 }
 
 function render() {
+  let isEnd = true;
   ctx.clearRect(
     0,
     0,
@@ -66,18 +76,19 @@ function render() {
     documentHeight.value * ratio
   );
   for (let i = 0; i < spirits.length; i++) {
-    spirits[i].draw();
-    spirits[i].update();
+    if (spirits[i].y <= documentHeight.value) {
+      isEnd = false;
+      spirits[i].draw();
+      spirits[i].update();
+    }
+  }
+  if (isEnd) {
+    show.value = false;
+    console.log(show.value);
+    return;
   }
   requestAnimationFrame(render);
 }
-// function destroy() {
-//         cancelAnimationFrame(raf);
-//         spirits.forEach(item => {
-//             item = null;
-//             return item;
-//         });
-//     }
 </script>
 
 <style lang="scss" scoped>
@@ -86,6 +97,6 @@ function render() {
   top: 0;
   left: 0;
   z-index: 99999;
-  // background-color: #000;
+  pointer-events: none;
 }
 </style>

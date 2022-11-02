@@ -14,7 +14,7 @@ export default class Spirit {
     this.ctx = ctx;
     this.options = options;
     this.x = this.randomX();
-    this.y = -random() * 400;
+    this.y = -200;
     this.vy = 1.2 + random();
     this.angle = 0;
     this.vangle = random() > 0.5 ? random() : -random();

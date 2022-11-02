@@ -6,7 +6,7 @@ editLink: true
 
 # Celebrate
 
-<ani-celebrate/>
+<ani-celebrate show/>
 
 <script setup lang="ts">
 import { reactive } from 'vue';

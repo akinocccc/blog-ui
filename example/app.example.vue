@@ -1,6 +1,6 @@
 <template>
   <div class="play-container">
-    <ani-celebrate />
+    <ani-celebrate show />
   </div>
 </template>
 
