@@ -1,4 +1,6 @@
-# animation-ui
+# Blog-ui
+
+> Developing...
 
 ## Devlopment
 
